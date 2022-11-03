@@ -1,0 +1,24 @@
+#dashboard-container {
+    border: red 2px solid;
+    margin: auto;
+    width: 85%;
+    display: flex;
+    flex-flow: row nowrap;
+    /* align-content: center; */
+    border-radius: 30px;
+    padding: 10px;
+    gap: 15px;
+}
+
+#session-section {
+    border: green 3px solid;
+    border-radius: 20px;
+    /* max-width: 70%; */
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 10px 0;
+    gap: 5px;
+    text-align: center;
+    
+}
+

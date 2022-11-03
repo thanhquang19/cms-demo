@@ -1,9 +1,19 @@
-import React from 'react'
+import React from 'react';
+import RequestForm from './RequestForm';
+import ActiveSession from './ActiveSession';
+import UpcomingSession from './UpcomingSession';
+import './Dashboard.css';
+
 
 export default function Dashboard() {
   return (
-    <>
-        <h1>This is the Main Dashboard</h1>
-    </>
+    <div id='dashboard-container'>
+        
+        <RequestForm/>
+        <div id='session-section'>
+          <ActiveSession/>
+          <UpcomingSession/>
+        </div>
+    </div>
   )
 }

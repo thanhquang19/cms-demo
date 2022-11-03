@@ -1,0 +1,8 @@
+.session-card {
+    margin: 5pt auto;
+    background-color: #d7fff2;
+    width: 150pt;
+    border-radius: 10pt;
+    padding: 5pt;
+    text-align: center;
+}
