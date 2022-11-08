@@ -1,0 +1,39 @@
+#main-nav {
+    
+    /* border: red 1px solid; */
+    text-align: left;
+ 
+    width: 85%;
+    margin: 1px auto 1px ; 
+
+}
+
+#main-nav ul {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+     
+}
+
+#main-nav ul li {
+    display: inline-block;
+    margin: 0 2px 0 0px;
+    padding: 5px 10px;
+    background-color: #3f826d;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px
+}
+
+#main-nav ul li:hover {
+    background-color: #e2725b ;
+    font-weight: bold;
+}
+
+
+#main-nav ul li a, a:visited {
+    color: #f8f8f8 ;
+    text-decoration: none; 
+    font-size: 1rem;
+    font-weight: light;
+}

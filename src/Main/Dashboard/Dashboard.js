@@ -10,10 +10,9 @@ export default function Dashboard() {
     <div id='dashboard-container'>
         
         <RequestForm/>
-        <div id='session-section'>
-          <ActiveSession/>
-          <UpcomingSession/>
-        </div>
+        <ActiveSession/>
+        <UpcomingSession/>
+        
     </div>
   )
 }

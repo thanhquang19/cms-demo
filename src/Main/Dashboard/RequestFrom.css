@@ -1,0 +1,17 @@
+#request-form {
+    box-sizing: border-box;
+    background-color: #e2725b;
+    border-radius: 20px;
+    padding: 0px 10px;
+    aspect-ratio: 1 / 1 ;
+    width: 45%;
+    text-align: center;
+}
+
+#request-form fieldset {
+    margin: 15px;
+}
+#request-form input {
+    font-size: 1rem;
+    margin: auto 5px;
+}

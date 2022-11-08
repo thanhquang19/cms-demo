@@ -1,5 +1,20 @@
+html {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 body {
-  margin: 5px 15px;
+  /* border: black 2px solid; */
+  margin-top: 20px;
+  aspect-ratio: 5 /2;
+  width: 80%;
+  background-color: #74c5ab;
+
+  
+  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

@@ -1,24 +1,33 @@
 #dashboard-container {
-    border: red 2px solid;
-    margin: auto;
+    /* border: red 2px solid; */
+    margin: 0px auto;
     width: 85%;
+    box-sizing: border-box;
     display: flex;
     flex-flow: row nowrap;
-    /* align-content: center; */
-    border-radius: 30px;
-    padding: 10px;
-    gap: 15px;
+    justify-content: space-around;
+    align-items: baseline;
+    border-radius: 20px;
+    border-top-left-radius: 0px;
+    padding: 25px 20px;
+    /* gap: 15px; */
+    background-color: #3f826d  ;
+    text-align: center;
 }
 
 #session-section {
-    border: green 3px solid;
+    /* border-top: #e2725b 3px solid;
+    border-bottom: #e2725b 3px solid; */
     border-radius: 20px;
-    /* max-width: 70%; */
+    aspect-ratio: 1 / 1;
+    width: 45%;
     display: flex;
     flex-flow: row nowrap;
-    padding: 10px 0;
+    justify-content: center ;
+    padding: 0px 0;
     gap: 5px;
     text-align: center;
+
     
 }
 

@@ -1,6 +1,45 @@
 
-#main header div {
-   
-    text-align: center;
+#main header {
+    /* border: yellow 2px solid; */
+    padding: 0;
+    display: grid;
+    grid-template-columns: 8fr 3fr;
+    align-items: center;
+    justify-content: end;
+    padding: 0px 20px;
+}
+
+#main header h1 {
+    color: #e2725b;
+    font-size: 2.5rem;
+    margin: 0;
+}
+#main header h1 span:first-child {
+    color: #f8f8f8;
+}
+
+#main header h1 span:nth-child(2) {
+    font-size: 1rem;
+}
+
+#main header h1 span:last-child {
+    color: #f8f8f8;
+    font-size: 2rem;
+}
+#main header div {   
+    /* border: yellow 2px solid; */
+    text-align: right;
     float: right;
+    color: #f8f8f8;
+
+}
+
+#main header div button {
+    color: #e2725b;
+    text-decoration: underline;
+    font-weight: bold;
+    background: none;
+    border: none;
+    border-left: #f8f8f8 1px solid;
+    cursor: pointer;
 }

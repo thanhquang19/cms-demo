@@ -9,6 +9,9 @@ export default function ActiveSession(props) {
         <SessionCard/>
         <SessionCard/>
         <SessionCard/>
+        <SessionCard/>
+        <SessionCard/>
+        
     </div>
   )
 }

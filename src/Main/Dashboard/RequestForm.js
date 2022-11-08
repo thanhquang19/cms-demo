@@ -1,4 +1,5 @@
-import {React, useRef} from 'react'
+import {React, useRef} from 'react';
+import './RequestFrom.css';
 
 export default function RequestForm(props) {
 
@@ -9,12 +10,17 @@ export default function RequestForm(props) {
     const selectedSerivce = useRef([]); 
     // try to loop through the checkboxes and push the value to the || also consider using useState || haven't put ref to input elements
     return (
-        <div id='form-container'>
-            <form id='request-form'>
+        <form id='request-form'>
                 <h2>Customer Request Form</h2>
-                <input ref={custName} type='text' id='cust-name' name='cust-name' placeholder='customer name' required></input>
-                <input ref={custTel} type='tel' id='cust-tel' name='cust-tel' placeholder='phone number' required></input>
-
+                <div>Session ID: <span id='session-id'>Session ID will go here</span></div>
+                
+                <fieldset>
+                     <lengend>Customer Info</lengend>
+                     <br/>
+                    <input ref={custName} type='text' id='cust-name' name='cust-name' placeholder='customer name' required></input>
+                    <input ref={custTel} type='tel' id='cust-tel' name='cust-tel' placeholder='phone number' required></input>
+                </fieldset>
+                
                 <fieldset>
                     <lengend>Select preferred date and time</lengend>
                     <br/>
@@ -65,6 +71,5 @@ export default function RequestForm(props) {
                 <br/>
                 <div><h4>Return Message After Each Button</h4></div>
             </form>
-        </div>
   )
 }

@@ -1,5 +1,19 @@
 #upcoming {
-    border-left: green 2px solid;
-    border-top-left-radius: 15px;
-    padding: 0 10px;
+    /* border-right: green 4px double; */
+    /* border-left: green 2px solid; */
+    /* background-color: #e2725b; */
+    border: #74c5ab 3px solid;
+    border-radius: 20px;
+    aspect-ratio: 1 / 2;
+    width: 25%;
+    padding: 0 4px;
+    padding: 0 4px;
+    overflow: auto;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#upcoming h2 {
+    font-size: 1.25rem;
+    color: #f8f8f8;
 }

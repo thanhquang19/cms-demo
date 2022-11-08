@@ -1,5 +1,17 @@
 #active {
-    border-right: green 2px solid;
-    border-bottom-right-radius: 15px;
-    padding: 0 10px;
+    border-right: #74c5ab 3px solid;
+    /* border-left: #e2725b 3px solid; */
+    border-radius: 20px;
+    aspect-ratio: 1 / 2;
+    width: 25%;
+    padding: 0 4px;
+    overflow: auto;
+    display: flex;
+    flex-flow: column nowrap;
+
+}
+
+#active h2 {
+       font-size: 1.25rem;
+    color: #f8f8f8;
 }

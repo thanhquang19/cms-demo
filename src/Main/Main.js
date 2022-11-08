@@ -12,8 +12,9 @@ export default function Main(props) {
     <div id='main'>
             
       <header>
+        <h1>s.nails <span>cms</span> <span>by</span> <span>BobaCorp</span></h1>
         <div>{props.currentUser} <span><Logout/></span></div>
-        <h1>S-Nails Customer Management System</h1>
+        
         
       </header>
       

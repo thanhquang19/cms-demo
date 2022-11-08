@@ -1,15 +1,16 @@
 import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom';
+import './Navbar.css';
 export default function Navbar() {
   return (
     <>
-        <nav>
+        <nav id='main-nav'>
             <ul>
                 <li>
-                    <Link to=''>Dashboard</Link>
+                    <Link to=''>appointments</Link>
                 </li>
                 <li>
-                    <Link to='*data'>Data Analytics</Link>
+                    <Link to='*data'>data analytics</Link>
                 </li>
             </ul>
         </nav>
