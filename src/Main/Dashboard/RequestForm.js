@@ -1,5 +1,6 @@
 import {React, useRef} from 'react';
 import './RequestFrom.css';
+import { services, customers } from '../../snails';
 
 export default function RequestForm(props) {
 
@@ -8,21 +9,36 @@ export default function RequestForm(props) {
     const preferredDate = useRef();
     const preferredTime = useRef();
     const selectedSerivce = useRef([]); 
+    
+    let customerNames = customers.map(customer => customer.CustomerName); //may need to use useEffect and useState to fetch data for each update. custName is useState?
+
     // try to loop through the checkboxes and push the value to the || also consider using useState || haven't put ref to input elements
+    
+    const getCustList = (e)=> {
+        if(custName.current.value.length > 0) {
+            let nameSearched = custName.current.value.toLowerCase;
+            customerNames = customerNames.filter(customerName => customerName.toLowerCase.indexOf(nameSearched) !== -1);
+        }
+        
+
+    }
     return (
         <form id='request-form'>
                 <h2>Customer Request Form</h2>
                 <div>Session ID: <span id='session-id'>Session ID will go here</span></div>
                 
                 <fieldset>
-                     <lengend>Customer Info</lengend>
+                     <legend>Customer Info</legend>
                      <br/>
-                    <input ref={custName} type='text' id='cust-name' name='cust-name' placeholder='customer name' required></input>
+                    <input ref={custName} onChange={getCustList} type='text' id='cust-name' name='cust-name' placeholder='customer name' required list='custList'></input>
+                    <datalist id='custList'>
+                        {customerNames.map(customerName => <option>{customerName}</option>)}
+                    </datalist>
                     <input ref={custTel} type='tel' id='cust-tel' name='cust-tel' placeholder='phone number' required></input>
                 </fieldset>
                 
                 <fieldset>
-                    <lengend>Select preferred date and time</lengend>
+                    <legend>Preferred Date and Time</legend>
                     <br/>
                     <input ref={preferredDate} type='date' id='preferred-date' name='preferred-date' placeholder=''></input>
                     <select ref={preferredTime} id='time-slot' name='time-slot'>
@@ -42,34 +58,30 @@ export default function RequestForm(props) {
                 </fieldset>
                 
                 <fieldset id='services'>
-                    <lengend>Select services</lengend>  
-                    <br/>
-                    {/* Conver the input to an JSX component, render base on the array services */}
-                    <input type='checkbox' id='service01' name='selected-service' class='selected-service' value='service01'></input>
-                    <label form='service01'>Service 01</label>
-                    
-                    <input type='checkbox' id='service02' name='selected-service' class='selected-service' value='service02'></input>
-                    <label form='service02'>Service 02</label>
-                    
-                    <input type='checkbox' id='service03' name='selected-service' class='selected-service' value='service03'></input>
-                    <label form='service03'>Service 03</label>
-                    
-                    <input type='checkbox' id='service04' name='selected-service' class='selected-service' value='service04'></input>
-                    <label form='service04'>Service 04</label>
-                    
-                    <input type='checkbox' id='service05' name='selected-service' class='selected-service' value='service05'></input>
-                    <label form='service05'>Service 05</label>
-                    
-                    <input type='checkbox' id='service05' name='selected-service' class='selected-service' value='service06'></input>
-                    <label form='service06'>Service 06</label>
+                    <legend>Services</legend>  
+                 
+                    {
+                        services.map(service => {
+                            return (
+                                <div>
+                                    <input type='checkbox' id={service.ServiceID} name='selected-service' className='selected-service' value={service.ServiceID}></input>
+                                    <label for={service.ServiceID}>{service.Service}</label>
+                                </div>
+                            )
+                        })
+
+                    }
+        
 
                 </fieldset>
                 
-                <button id='schedule-bttn'>Schedule</button>
-                <button id='checkin-bttn'>Check In</button>
-                <button id='cancel-bttn' disabled>Cancel</button>
+                <div id='btn-group'>
+                    <button id='schedule-bttn'>Schedule</button>
+                    <button id='checkin-bttn'>Check In</button>
+                    <button id='cancel-bttn' disabled>Cancel</button>
+                </div>
                 <br/>
-                <div><h4>Return Message After Each Button</h4></div>
+                <div><h4 id='return-msg'>Return Message After Each Button</h4></div>
             </form>
   )
 }

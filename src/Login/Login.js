@@ -17,7 +17,7 @@ export default function Login(props) {
       await LoginEvent(emailRef.current.value, passwordRef.current.value);
       
     } catch (err) {
-      getErrMsg('unmatched user email or password')
+      getErrMsg('unmatched email or password')
     }  
    
   }

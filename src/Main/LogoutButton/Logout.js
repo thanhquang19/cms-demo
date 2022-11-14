@@ -9,6 +9,7 @@ export default function Logout(props) {
     e.preventDefault();
     try {
       await LogoutEvent();
+      sessionStorage.clear();
       //getErrMsg('');
    } catch (err) {
       //window.alert(err);
