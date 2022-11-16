@@ -15,7 +15,8 @@ export default function ActiveSession(props) {
               date={session.Date}
               time={session.Time}  
               services={session.Service}
-              status={session.Status}
+              status={session.Status} 
+              // status here need to be updated for correct render
               sessionId = {session.SessionID}
               />
             }

@@ -1,0 +1,8 @@
+#checkout {
+    border: mediumaquamarine 4px solid;
+    background-color: aquamarine;
+    aspect-ratio: 3/4 ;
+    width: 300px;
+    text-align: center;
+    cursor: pointer;
+}
