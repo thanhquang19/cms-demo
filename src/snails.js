@@ -67,7 +67,7 @@ export const customers = [
 export const  services =[
     {
         "ServiceID":"Serv01",
-        "Service":"Full set",
+        "Service":"Full Set",
         "Price":"40.00"
     },
 
@@ -107,7 +107,7 @@ export const  services =[
 export const sessions=[
     {
         "SessionID":"SS2234",
-        "Service":"full set",
+        "Service":["Full Set"],
         "Date":"2023-04-23",
         "Time": "TS01",
         "CustomerName":"Tieu Hoan",
@@ -116,7 +116,7 @@ export const sessions=[
 
     {
         "SessionID":"SS2563",
-        "Service":"manicure, waxing, dip powder",
+        "Service":["Manicure", "Waxing", "Dip Powder"],
         "Date":"2022-012-09",
         "Time": "TS09",
         "CustomerName":"Tang thu thu",
@@ -124,7 +124,7 @@ export const sessions=[
     },
     {
         "SessionID":"SS4543",
-        "Service":"manicure, nail repair",
+        "Service":["Manicure", "Nail Repair"],
         "Date":"2022-12-29",
         "Time": "TS03",
         "CustomerName":"Luc tuyet ky",
@@ -132,7 +132,7 @@ export const sessions=[
     },
     {
         "SessionID":"SS2349",
-        "Service":"pedicure",
+        "Service":["Pedicure"],
         "Date":"2023-06-09",
         "Time": "TS10",
         "CustomerName":"Lam kinh vu",
@@ -140,7 +140,7 @@ export const sessions=[
     },
     {
         "SessionID":"SS9364",
-        "Service":"pedicure,manicure, waxing, dip powder",
+        "Service":["Pedicure","Manicure", "Waxing", "Dip Powder"],
         "Date":"2023-12-12",
         "Time": "TS01",
         "CustomerName":"Tieu Pham",
@@ -149,7 +149,7 @@ export const sessions=[
 
     {
         "SessionID":"SS6456",
-        "Service":"manicure, waxing, dip powder",
+        "Service":["Manicure", "Waxing", "Dip Powder"],
         "Date":"2023-1-12",
         "Time": "TS01",
         "CustomerName":"Hoang Le",
@@ -158,7 +158,7 @@ export const sessions=[
 
     {
         "SessionID":"SS3458",
-        "Service":"pedicure,manicure",
+        "Service":["Pedicure","Manicure"],
         "Date":"2023-1-12",
         "Time": "TS02",
         "CustomerName":"Denaerys Targeryon",
@@ -166,7 +166,7 @@ export const sessions=[
     },
     {
         "SessionID":"SS5357",
-        "Service":"Nail repair",
+        "Service":["Nail Repair"],
         "Date":"2023-2-28",
         "Time": "TS06",
         "CustomerName":"John Snow",
@@ -174,7 +174,7 @@ export const sessions=[
     },
     {
         "SessionID":"SS7493",
-        "Service":" waxing, dip powder, Nail repair",
+        "Service":["Waxing", "Dip Powder", "Nail Repair"],
         "Date":"2023-2-2",
         "Time": "TS03",
         "CustomerName":"Hugh Jassman",
@@ -182,7 +182,7 @@ export const sessions=[
     },
     {
         "SessionID":"SS1167",
-        "Service":"pedicure,manicure, waxing, dip powder, full set",
+        "Service":["Pedicure","Manicure", "Waxing", "Dip Powder", "Full Set"],
         "Date":"2023-2-4",
         "Time": "TS08",
         "CustomerName":"Sao Kia",
