@@ -44,7 +44,7 @@ export default function SessionCard(props) {
       <div className='session-card' onClick={handleClick}>
           <div><strong>{props.custName}</strong></div>
           <div><span>{props.date}</span> <span>{props.time}</span></div>
-          <div>{usedServices}</div>
+          <div>{usedServices.join(', ')}</div>
           <CheckoutPopUp open={checkoutOpen} onClose={()=>setCheckoutOpen(false)} checkout={handleCheckOut}/>
           <UpcomingPopUp open={upcomingPopUpOpen} onClose={()=>setUpcomingPopUpOpen(false)}/>
       </div>

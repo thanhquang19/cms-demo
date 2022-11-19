@@ -85,7 +85,7 @@ export default function ModifyingServices() {
               <tr>
                 <td colSpan='2'>
                   <select id='more-services' ref={selectedMoreService} onChange={addService}  >
-                    <option disabled> add service</option>
+                    <option disabled  selected> add service</option>
                     {services.map(service => {
                      
                        return <option value={[service.Service, service.Price]}>{service.Service} (${service.Price})</option>
@@ -95,8 +95,7 @@ export default function ModifyingServices() {
                     {/* the value of option is a string 'service, price' */}
                   </select>
                 </td>
-                <td><button id='addServiceBtn' onClick={addService}>+</button></td>
-                {/* the button here is not neccessary */}
+                
               </tr>
               
             </tbody>
