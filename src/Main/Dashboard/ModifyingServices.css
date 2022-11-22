@@ -1,0 +1,23 @@
+.modifying {
+   
+
+}
+.modifying td {
+    font-size: 0.85rem;
+    padding: 0 10px;
+    
+}
+.modifying thead tr th:last-child {
+    text-align: right;
+}
+.modifying .usedService {
+    text-align: left;
+}
+
+.usedService {
+    text-align: left;
+}
+
+.totalPrice {
+    font-weight: bold;
+}

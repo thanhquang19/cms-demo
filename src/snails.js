@@ -86,7 +86,7 @@ export const  services =[
     {
         "ServiceID":"Serv04",
         "Service":"Nail Repair",
-        "Price":"100"
+        "Price":"100.00"
     },
 
     {

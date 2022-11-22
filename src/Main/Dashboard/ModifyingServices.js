@@ -1,6 +1,7 @@
 import {React , useContext, useEffect, useRef, useState}from 'react'
 import { services } from '../../snails';
 import {SessionContext} from './SessionCard';
+import './ModifyingServices.css'
 
 export default function ModifyingServices() {
     const usedServices = useContext(SessionContext);
@@ -26,7 +27,7 @@ export default function ModifyingServices() {
       const getTotalPrice = () => {
         let total = 0;
         usedServicesToRender.forEach(service => total += Number(service[1]));
-        return total;
+        return total.toFixed(2);
       }
       useEffect(() => getTotalPrice, [usedServicesToRender])
       //whenever usedServicesToRendered changes, useEffect runs >> total Price gets updated
@@ -60,8 +61,8 @@ export default function ModifyingServices() {
         selectedMoreService.current.selectedIndex = 0; //reset the select input
       }
       return (
-        <div className="App">
-          <table>
+        
+          <table className="modifying">
             <thead>
               <tr>
                 <th>Service</th>
@@ -74,8 +75,8 @@ export default function ModifyingServices() {
                   
                   return (
                     <tr>
-                      <td>{usedService[0]}</td>
-                      <td>${usedService[1]}</td>
+                      <td className='usedService'>{usedService[0]}</td>
+                      <td className='usedServicePrice'>${usedService[1]}</td>
                       <td><span className='removeServiceBtn' onClick={handleRemove} index={usedServicesToRender.indexOf(usedService)}>x</span></td>
                       {/* 0 is service name, 1 is service price */}
                     </tr>
@@ -83,7 +84,7 @@ export default function ModifyingServices() {
                 })
               }
               <tr>
-                <td colSpan='2'>
+                <td colSpan='3'>
                   <select id='more-services' ref={selectedMoreService} onChange={addService}  >
                     <option disabled  selected> add service</option>
                     {services.map(service => {
@@ -102,10 +103,10 @@ export default function ModifyingServices() {
             <tfoot>
                 <tr>
                   <th>Total</th>
-                  <td>${getTotalPrice()}</td>
+                  <td className='totalPrice'>${getTotalPrice()}</td>
                 </tr>
               </tfoot>
           </table>
-        </div>
+       
       );
 }

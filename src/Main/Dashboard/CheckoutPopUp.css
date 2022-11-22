@@ -1,8 +1,66 @@
 #checkout {
-    border: mediumaquamarine 4px solid;
-    background-color: aquamarine;
+    border-radius: 15px;
+    background-color: #3f826d;
     aspect-ratio: 3/4 ;
-    width: 300px;
+    width: 325px;
     text-align: center;
+    cursor: pointer;
+    box-shadow: #f8f8f8 0px 0px 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+}
+
+#checkout h1 {
+    color: #e2725b;
+    text-shadow: #f8f8f8 0 0 1px;
+    margin: 0;
+}
+
+.billingsInfo {
+    aspect-ratio: 8/9;
+    width: 90%;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px 0;
+    gap: 10px;
+
+
+}
+
+.billingsInfo h3, p {
+    margin: 0;
+  
+}
+
+.billingsInfo table {
+    width: 95%;
+  
+}
+
+.billingsInfo th{
+    text-align: left;
+}
+.billingsInfo td{
+    text-align: right;
+    font-size: 0.75rem;
+}
+
+#checkoutbtn {
+    width: 75%;
+    /* font-size: 1rem; */
+    background-color: #e2725b;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
     cursor: pointer;
 }

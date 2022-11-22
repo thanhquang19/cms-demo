@@ -6,12 +6,35 @@ import ModifyingServices from './ModifyingServices'
 // status of the session will be update to 'done' (HOWWWW)
 
 export default function CheckoutPopUp(props) {
+
+  const checkOutDateTime = () => {
+    let checkoutTime = new Date();
+    return checkoutTime.toLocaleDateString('us-US') + " " + checkoutTime.toLocaleTimeString();
+    
+  }
   return (
     <Popup position='center center' closeOnDocumentClick open={props.open} onClose={props.onClose}>
         <div id='checkout'>
-            <h2>Checkout</h2>
-            <ModifyingServices/>
-            <button type='submit' onClick={props.checkout}>Proceed to Checkout</button> 
+            <h1>s.nails</h1>
+            <div className='billingsInfo'>
+             
+              <table>
+                <tr>
+                  <th>{props.sessionInfo.custName} </th>
+                  <td  >
+                    <p>{checkOutDateTime()}</p>
+                    session id goes here
+                  </td>
+                </tr>
+              </table>
+             
+              
+               
+              
+              
+              <ModifyingServices className='modifying'/>
+            </div>
+            <button type='submit' id='checkoutbtn' onClick={props.checkout}>Proceed to Checkout</button> 
         </div>
     </Popup>
   )
